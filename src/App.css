@@ -26,6 +26,11 @@
     width: 100%;
 }
 
+.grid-item {
+    font-size: 1em;
+    font-weight: 600;
+}
+
 .name-heading, .phone-heading {
     color: #808080;
     font-weight: bold;
