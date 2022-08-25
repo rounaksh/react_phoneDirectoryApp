@@ -15,6 +15,17 @@
     width: 80px;
 }
 
+.delete-btn {
+    background-color: #fa9c9c;
+    text-transform: uppercase;
+    border: none;
+    color: #000;
+    padding: 10px 20px;
+    cursor: pointer;
+    width: max-content;
+    font-weight: 400 !important;
+}
+
 .grid-container {
     display: grid;
     grid-template-columns: 40% 30% auto;
