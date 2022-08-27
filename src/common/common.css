@@ -1,0 +1,14 @@
+.container {
+    padding: 20px;
+}
+
+.btn {
+    font-size: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    width: 80px;
+    background: #d3d3d3;
+}

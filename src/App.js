@@ -3,6 +3,10 @@ import Header from './Header';
 import './App.css';
 
 class App extends Component {
+  deleteHandler(message){
+    alert(message);
+  }
+
   render() {
     let contacts = [
       {
@@ -21,11 +25,13 @@ class App extends Component {
         contactNo: '91xxxxxxx0'
       }
     ];
+
     return (
       <div>
         <Header heading="Phone Directory"/>
         <div className='container'>
           <button className='add-btn'>Add</button>
+          
           <div className='grid-container head-section'>
             <span className='grid-item name-heading'>Name</span>
             <span className='grid-item phone-heading'>Phone</span>
@@ -35,7 +41,7 @@ class App extends Component {
               return <div className='grid-container' key={details.id}>
                         <span className='grid-item'>{details.name}</span>
                         <span className='grid-item'>{details.contactNo}</span>
-                        <button className='grid-item delete-btn'>delete</button>
+                        <button className='grid-item delete-btn' onClick={this.deleteHandler.bind(this, "Delete Clicked")}>delete</button>
                       </div>
             })
           }
