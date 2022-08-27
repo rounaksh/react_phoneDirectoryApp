@@ -1,0 +1,22 @@
+.add-contact-form {
+    display: grid;
+    padding-top: 2%;
+    width: 100%;
+}
+
+.form-group, .subscriber-info {
+    display: grid;
+    width: 22%;
+    padding-bottom: 2%;
+}
+
+.form-label, .subscriber-name, .subscriber-contact {
+    font-weight: 600;
+    color: #787878;
+}
+
+.form-input {
+    border: 2px solid #b4b4b4;
+    border-radius: 5px;
+    padding: 4%;
+}
