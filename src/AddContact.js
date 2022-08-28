@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Header from './Header'
+import Header from './common/Header'
 import './AddContact.css'
 
 class AddContact extends Component {
@@ -17,7 +17,16 @@ class AddContact extends Component {
         const state = this.state;
         state[e.target.name] = e.target.value;
         this.setState(state);
-        console.log(state);
+    }
+
+    formSubmitHandler = (e) => {
+        e.preventDefault();
+        this.props.addContactHandler(this.state);
+        this.setState({
+            id: 0,
+            name: '',
+            contact: ''
+        })
     }
 
     render() {
@@ -26,7 +35,7 @@ class AddContact extends Component {
                 <Header heading="Add Contact" />
                 <div className='container'>
                     <button className='btn'>back</button>
-                    <form className='add-contact-form'>
+                    <form className='add-contact-form' onSubmit={this.formSubmitHandler.bind(this)}>
                         <div className='form-group'>
                             <label htmlFor='name' className='form-label'>Name: </label>
                             <input id='name' className='form-input' name='name' type="text" onChange={this.inputChangeHandler} />
